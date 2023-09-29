@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: linear-gradient(to bottom, darkblue, skyblue);
+  transform: rotate(90deg);
+}
+
+.logo {
+  width: 20vh;
+  height: 20vh;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+.menu-item {
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.download-button {
+  background-color: orange;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+}
+
+.main-content h1 {
+  color: white;
+}
+
+.main-content h1 span {
+  color: yellow;
+}
+</style>
+</head>
+<body>
+<img src="logo.png" alt="Logo" class="logo">
+<div class="menu">
+<a href="index.html"><div class="menu-item">Home</div></a>
+<a href="about.html"><div class="menu-item">About</div></a>
+<div class="menu-item">Courses</div>
+<a href="faq_new.html"><div class="menu-item">FAQs</div></a>
+<a href="contact.html"><div class="menu-item">Contact</div></a>
+<div class="menu-item download-button">Download</div>
+</div>
+<div class="main-content">
+<h1><span>Law</span>sy</h1>
+<button class="download-button">Download</button>
+</div>
+</body>
+</html>
+<html>
+<head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: linear-gradient(to bottom, darkblue, skyblue);
+  transform: rotate(90deg);
+}
+
+.logo {
+  width: 20vh;
+  height: 20vh;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-item {
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.nav-item:hover {
+  color: yellow;
+}
+
+.download-button {
+  background-color: orange;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.banner {
+  background-image: url("banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+.banner h1 {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  line-height: 400px;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form-item label {
+  color: darkblue;
+  font-size: 20px;
+}
+
+.form-item input, .form-item textarea {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-item input[type="submit"] {
+  background-color: green;
+  color: white;
+}
+
+.required {
+  color: red;
+}
+</style>
+</head>
+<body>
+<img src="logo.png" alt="Logo" class="logo">
+<div class="navbar">
+<a href="index.html"><div class="nav-item">Home</div></a>
+<a href="about.html"><div class="nav-item">About</div></a>
+<div class="nav-item">Courses</div>
+<a href="faq_new.html"><div class="nav-item">FAQs</div></a>
+<a href="contact.html"><div class="nav-item">Contact</div></a>
+<div class="nav-item download-button">Download</div>
+</div>
+<div class="banner">
+<h1>Contact Us</h1>
+</div>
+<div class="form-container">
+<form action="contact.php" method="post">
+<div class="form-item">
+<label for="fname">First Name<span class="required">*</span></label>
+<input type="text" id="fname" name="fname" required>
+</div>
+<div class="form-item">
+<label for="mname">Middle Name</label>
+<input type="text" id="mname" name="mname">
+</div>
+<div class="form-item">
+<label for="lname">Last Name<span class="required">*</span></label>
+<input type="text" id="lname" name="lname" required>
+</div>
+<div class="form-item">
+<label for="email">Email Address<span class="required">*</span></label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-item">
+<label for="question">Question</label>
+<textarea id="question" name="question" rows="5"></textarea>
+</div>
+<div class="form-item">
+<input type="submit" value="Send">
+</div>
+</form>
+</div>
+</body>
+</html>
+
